@@ -1,10 +1,10 @@
 > 提醒： 滥用可能导致账户被BAN！！！   
   
-* 使用v2ray+caddy同时部署通过ws传输的vmess vless trojan shadowsocks socks等协议  
-* 支持tor网络，且可通过自定义网络配置文件启动v2ray和caddy来按需配置各种功能  
+* 使用[xray](https://github.com/XTLS/Xray-core)+caddy同时部署通过ws传输的vmess vless trojan shadowsocks socks等协议  
+* 支持tor网络，且可通过自定义网络配置文件启动xray和caddy来按需配置各种功能  
 * 支持存储自定义文件,目录及账号密码均为AUUID,客户端务必使用TLS连接  
   
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/Jamcurr/Vless)  
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/Jamcurr/Vless/  
   
 ### 服务端
 点击上面紫色`Deploy to Heroku`，会跳转到heroku app创建页面，填上app的名字、选择节点、按需修改部分参数和AUUID后点击下面deploy创建app即可开始部署  
@@ -18,10 +18,10 @@
 * **务必替换所有的8f91b6a0-e8ee-11ea-adc1-0242ac120002为部署时设置的AUUID**  
   
 <details>
-<summary>v2ray</summary>
+<summary>xray</summary>
 
 ```bash
-* 客户端下载：https://github.com/v2fly/v2ray-core/releases
+* 客户端下载：https://github.com/XTLS/Xray-core/releases
 * 代理协议：vless 或 vmess
 * 地址：appname.herokuapp.com
 * 端口：443
@@ -66,7 +66,7 @@
 * 端口: 443
 * 密码：password
 * 加密：chacha20-ietf-poly1305
-* 插件程序：v2ray-plugin_windows_amd64.exe  //需将插件https://github.com/shadowsocks/v2ray-plugin/releases下载解压后放至shadowsocks同目录
+* 插件程序：xray-plugin_windows_amd64.exe  //需将插件https://github.com/shadowsocks/xray-plugin/releases下载解压后放至shadowsocks同目录
 * 插件选项: tls;host=appname.herokuapp.com;path=/8f91b6a0-e8ee-11ea-adc1-0242ac120002-ss
 ```
 </details>
